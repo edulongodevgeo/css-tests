@@ -1,0 +1,151 @@
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #79d5ff, #ff6600, #5f0ac0, #190035);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}    
+}
+
+/* Este seletor "*" ajuda a aplicar determinados parâmetros para todos os
+elementos então dentro deste container, enquanto a "declaração" acima serve 
+"apenas" ao container em si. Há um diferença fina neste método. */
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.topnav {
+    overflow: hidden;
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+  }
+  
+  .topnav a.active {
+    /* background-color: #4CAF50; */
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+.header{
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+    height: 120px;
+}
+
+
+.footer {
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+    height: 80px;
+}
+
+.main {
+    text-align: left;
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+    height: 300px;
+    font-size: 24px;
+}
+
+.aside1 {
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+}
+
+/* .aside2 {
+    background: rgb(255,255,255,0.3);
+    border-radius: 6px;
+    box-shadow: 0 5px 35px black;
+} */
+
+@media all and (min-width: 800px){
+    .main {
+        flex: 3;
+    }
+
+    .aside1 {
+        order: 1;
+    }
+
+    /* .aside2 {
+        order: 2;
+    } */
+    .main {
+        order: 2;
+    }
+    .footer {
+        order: 4;
+    }
+    
+} 
+@media all and (min-width: 600px){
+    .aside{
+        flex: 1;
+    }
+}
+

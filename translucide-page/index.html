@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Translucid-page</title>
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          
+          <!-- <div style="padding-left:16px">
+            <h2>Responsive Topnav Example</h2>
+            <p>Resize the browser window to see how it works.</p>
+          </div> -->
+          
+          <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+          </script>
+          
+
+        <header class="header">
+            <h1>Header</h1>
+        </header>
+
+        
+        <article class="main">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore debitis magni vel, pariatur non incidunt est maxime omnis quasi, consequatur maiores laudantium suscipit aperiam, eos molestias recusandae quo id explicabo!</p>
+        </article>
+        <aside class="aside aside1">
+            <h1>Aside 1</h1>
+        </aside>
+        <!-- <aside class="aside aside2">
+            <h1>Aside 2</h1>
+        </aside>        -->
+        <footer class="footer">
+            <h1>Footer</h1>
+        </footer>
+    </div>
+</body>
+</html>
